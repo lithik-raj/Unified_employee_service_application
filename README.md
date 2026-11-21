@@ -2,7 +2,8 @@
 ### *Next-Gen Enterprise Workplace OS with Biometric Security, AI Copilot & Predictive ML Analytics*
 
 [![GitHub repo](https://img.shields.io/badge/GitHub-lithik--raj%2FUnified__employee__service__application-181717?style=for-the-badge&logo=github)](https://github.com/lithik-raj/Unified_employee_service_application)
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lithik-raj/Unified_employee_service_application)
+[![Live Vercel Link](https://img.shields.io/badge/Live_App-unified--employee--service--application.vercel.app-00ffc8?style=for-the-badge&logo=vercel)](https://unified-employee-service-application-lithik-raj.vercel.app)
 [![React](https://img.shields.io/badge/Frontend-React_18-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
 [![Node.js](https://img.shields.io/badge/Backend-Node.js_20-339933?style=for-the-badge&logo=node.js)](https://nodejs.org)
 [![FastAPI](https://img.shields.io/badge/ML_Service-FastAPI-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
