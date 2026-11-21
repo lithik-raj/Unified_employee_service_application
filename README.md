@@ -1,206 +1,227 @@
-# 🌐 Unified Employee Service Application
-### *Next-Gen Enterprise Workplace OS with Biometric Security, AI Copilot & Predictive ML Analytics*
+# 🏢 Unified Employee Service Application (NEXUS AI Workplace OS)
 
-[![GitHub repo](https://img.shields.io/badge/GitHub-lithik--raj%2FUnified__employee__service__application-181717?style=for-the-badge&logo=github)](https://github.com/lithik-raj/Unified_employee_service_application)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lithik-raj/Unified_employee_service_application)
-[![Live Vercel Link](https://img.shields.io/badge/Live_App-unified--employee--service--application.vercel.app-00ffc8?style=for-the-badge&logo=vercel)](https://unified-employee-service-application-lithik-raj.vercel.app)
-[![React](https://img.shields.io/badge/Frontend-React_18-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
-[![Node.js](https://img.shields.io/badge/Backend-Node.js_20-339933?style=for-the-badge&logo=node.js)](https://nodejs.org)
-[![FastAPI](https://img.shields.io/badge/ML_Service-FastAPI-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
-[![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb)](https://mongodb.com)
+<p align="center">
+  <strong>Next-Generation Enterprise Workplace Operating System powered by Biometric Security, Contextual AI Copilot, and Predictive Workforce ML.</strong>
+</p>
 
----
+<p align="center">
+  <a href="https://github.com/lithik-raj/Unified_employee_service_application"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repo" /></a>
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/lithik-raj/Unified_employee_service_application"><img src="https://img.shields.io/badge/Deploy%20with-Vercel-black?style=for-the-badge&logo=vercel" alt="Deploy on Vercel" /></a>
+  <a href="https://unified-employee-service-application-lithik-raj.vercel.app"><img src="https://img.shields.io/badge/Live%20App-Vercel%20Production-00ffc8?style=for-the-badge&logo=vercel" alt="Live App" /></a>
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT" />
+</p>
 
-## 💡 The Story Behind the Project
-
-During an intensive team hackathon sprint, we asked ourselves a simple question:
-> *Why does an employee have to open five different disconnected portals just to check their leave balance, file an IT ticket, log attendance, find a coworker's skill set, and check company announcements?*
-
-Most corporate intranets are clunky, slow, and feel like they were designed in 2008. We teamed up to rebuild workplace software from the ground up as a **Unified Employee Service Application** — combining **biometric authentication (Face ID & Fingerprint)**, a **conversational AI Copilot**, **hands-free voice commands**, and **predictive machine learning models** that detect burnout before it happens.
-
----
-
-## ⚡ What Makes It Special?
-
-### 👁️ Real In-Browser Biometric Face Recognition
-- Powered by `face-api.js` with client-side ResNet-34 vector embeddings.
-- **Liveness detection**: verifies head orientation and blinks to prevent spoofing photos.
-- 128-dimensional Euclidean distance matching against stored face vectors.
-- Instant, passwordless login in under **0.8 seconds**.
-
-### 👆 Hardware-Level WebAuthn Fingerprint Auth
-- Integrates directly with Windows Hello, Touch ID, and mobile biometric sensors via the native W3C WebAuthn API.
-- Zero credential transmission — private keys remain secured inside your hardware enclave.
-
-### 🤖 Intelligent Workplace Copilot
-- Natural language intent engine that turns conversations into actions.
-- Ask: *"I need 3 days off next week for my sister's wedding"* → Copilot automatically checks your remaining balance and pre-fills your leave form.
-- Ask: *"My laptop screen is flickering after the update"* → Auto-triages priority, classifies the ticket under IT Hardware, and proposes instant troubleshooting steps.
-- Works in **offline demo mode** or with full OpenAI GPT integration.
-
-### 🎙️ Hands-Free Voice Navigation
-- Built using the native Web Speech API.
-- Speak commands like *"Open HR Portal"*, *"Show my analytics"*, or *"Raise a ticket"* for seamless access.
-
-### 🧠 Predictive ML & Wellness Analytics
-- **Burnout Prediction**: Random Forest regressor analyzing overtime, leave frequency, and task velocity to flag early exhaustion.
-- **IT Ticket Auto-Classifier**: TF-IDF + Multinomial Naive Bayes pipeline routing tickets instantly to the right department.
-- **Anomaly Detection**: Isolation Forest spotting suspicious off-hours data access patterns.
-- **Workplace Sentiment Monitoring**: Emotion AI camera stream analyzing facial expressions during check-ins.
-
-### 🎨 Cyberpunk Glassmorphism UI (5 Switchable Themes)
-- ⚡ **Neon AI** (Default electric cyan)
-- 🌌 **Aurora** (Deep purple cyber-glass)
-- 🔴 **Cyberpunk** (High-contrast crimson)
-- 💼 **Corporate** (Clean professional navy)
-- ❄️ **Arctic** (Crisp minimal light mode)
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18.2.0-61DAFB?style=flat-square&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Node.js-20.x-339933?style=flat-square&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express-4.18-000000?style=flat-square&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-0.100%2B-009688?style=flat-square&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-7.0-47A248?style=flat-square&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Socket.io-4.6-010101?style=flat-square&logo=socket.io&logoColor=white" />
+</p>
 
 ---
 
-## 🛠️ Rectified UI & Stability Fixes
+## 📌 Live Deployments & Quick Links
 
-During our hackathon post-mortem and codebase cleanup, we resolved critical cross-browser issues:
-
-1. **Eliminated the "White Box" Select Dropdown Bug**:
-   - *Problem*: In Windows Chromium browsers (Chrome & Edge) under dark mode, native `<select>` dropdown menus rendered transparently or with an OS-default bright white popup box, causing near-white text (`#e8fff8`) to be unreadable or look like a blank white box.
-   - *Fix*: Standardized solid `--bg2` backings, set explicit `color-scheme: dark`, styled `<option>` items with high-contrast text, added custom SVG chevron indicators, and eliminated default Windows outline highlights across `HRPage`, `ITHelpdeskPage`, `SignupPage`, and `global.css`.
-2. **Fixed Date Picker White Popup Box**:
-   - Added theme-aware `color-scheme: dark` to `input[type="date"]` elements to prevent the browser's calendar overlay from appearing as a washed-out white box.
-3. **Resilient Offline / Vercel Demo Fallback**:
-   - Enhanced `authStore.js` with graceful fallback credentials. Anyone testing the live Vercel deployment can explore the entire app even without a running local backend server.
-4. **Clean Vercel SPA Routing**:
-   - Added `vercel.json` rewrite rules and `.npmrc` peer dependency overrides so client-side routes (`/dashboard`, `/hr`, `/it`, `/directory`, etc.) never throw 404s on page refresh.
+| Resource | Direct Link | Description |
+|---|---|---|
+| 🐙 **GitHub Repository** | [github.com/lithik-raj/Unified_employee_service_application](https://github.com/lithik-raj/Unified_employee_service_application) | Full-stack source repository |
+| ⚡ **Vercel 1-Click Deploy** | [Deploy to Vercel](https://vercel.com/new/clone?repository-url=https://github.com/lithik-raj/Unified_employee_service_application) | Instant zero-config cloud deployment |
+| 🌐 **Vercel Live Application** | [unified-employee-service-application-lithik-raj.vercel.app](https://unified-employee-service-application-lithik-raj.vercel.app) | Live interactive preview |
+| 🌐 **Alternative Live URL** | [unified-employee-service-application.vercel.app](https://unified-employee-service-application.vercel.app) | Production mirror |
 
 ---
 
-## 🎯 Demo Credentials (Try It Instantly)
+## 📖 Executive Summary & Motivation
 
-No setup needed — you can test the app right away with these pre-seeded demo accounts:
+Modern corporate environments suffer from acute **application fragmentation**:
+* Employees toggle between 5 to 8 isolated portals daily (one for HR leave requests, another for IT support tickets, separate portals for shift logs, team directories, and internal announcements).
+* Traditional authentication relies on repetitive passwords and SMS 2FA prompts that interrupt focus.
+* HR and IT teams are burdened by repetitive triage tickets and lack predictive indicators to spot workforce burnout before employee churn occurs.
 
-| Role | Email | Password | Access Level |
+**Unified Employee Service Application** addresses this challenge directly. Engineered during an intensive hackathon sprint, the platform combines **in-browser neural face biometrics**, **WebAuthn hardware fingerprint keys**, an **agentic AI Copilot**, **hands-free voice navigation**, and **real-time scikit-learn predictive ML models** into a consolidated, glassmorphism workspace operating system.
+
+---
+
+## ✨ Core Pillars & Features
+
+### 1. 👁️ Real Biometric Face Recognition
+* **ResNet-34 Feature Embeddings**: Evaluates 128-dimensional facial vectors client-side using `face-api.js` and TensorFlow runtimes.
+* **Anti-Spoof Liveness Engine**: Computes Eye Aspect Ratio (EAR) blink counts and head angle movements in real time to defeat static photograph spoofing.
+* **Sub-Second Matching**: Euclidean distance vector comparison against stored biometric templates executes in `< 0.8s`.
+* **Zero-Lag Concurrency Lock**: Features an asynchronous `isDetecting` process barrier with throttled 150ms evaluation loops to prevent CPU spikes.
+
+### 2. 👆 WebAuthn Hardware Fingerprint Authentication
+* Direct hardware-level integration with **Windows Hello**, **Apple Touch ID**, and **Android Biometrics** via the W3C WebAuthn standard.
+* Cryptographic challenge-response handshakes ensure raw biometric records never leave the user's local secure enclave.
+* Fallback options available for testing environments lacking physical biometric sensors.
+
+### 3. 🤖 Contextual AI Copilot
+* **Natural Language Intent Engine**: Recognizes operations across ticket creation, leave allowance inquiries, talent search, and department analytics.
+* **Instant Action Routing**: Pre-populates forms and routes users across application tabs automatically.
+* **Dual Runtime Architecture**: Operates with zero latency via local intent matching when offline or connects seamlessly to OpenAI GPT backends when API keys are configured.
+
+### 4. 🎙️ Hands-Free Voice Assistant
+* Powered by the native browser **Web Speech API**.
+* Voice-activated routing: speak *"Open HR portal"*, *"Raise ticket"*, *"Show analytics"*, or *"Find developers"* for hands-free workflow execution.
+
+### 5. 🧠 Predictive Machine Learning & Workforce Analytics
+* **Burnout Regressor (Random Forest)**: Evaluates weekly shift duration, overtime volume, and leave frequency to identify burnout risks.
+* **IT Ticket Auto-Triage (TF-IDF + Naive Bayes)**: Ingests user problem descriptions and automatically routes priority and technical category.
+* **Anomaly Detection (Isolation Forest)**: Flags anomalous after-hours data access patterns across system activity logs.
+* **Emotion & Wellness AI**: In-browser check-in evaluation assessing employee sentiment and work-life balance trends.
+
+### 6. 🎨 Multi-Theme Glassmorphism UI
+Instant live theme toggling across 5 specialized colorways:
+* ⚡ **Neon AI** *(Default electric cyan)*
+* 🌌 **Aurora** *(Deep cyber violet glass)*
+* 🔴 **Cyberpunk** *(High-contrast dark crimson)*
+* 💼 **Corporate** *(Enterprise deep navy)*
+* ❄️ **Arctic** *(Modern high-clarity light mode)*
+
+---
+
+## 🛠️ Rectified Bugs & Optimizations
+
+| Bug / Vulnerability | Root Cause | Engineering Solution |
+|---|---|---|
+| **White Box Select Glitch** | Windows Chromium engines in dark mode rendered `<select>` native menus with an unstyled white background box and near-white text (`#e8fff8`), causing options to appear as a solid blank box. | Applied theme-aware `color-scheme: dark`, solid `--bg2` backgrounds, styled `<option>` rows, removed default Windows outlines, and introduced custom SVG arrow indicators in `global.css`, `HRPage.js`, `ITHelpdeskPage.js`, and `SignupPage.js`. |
+| **White Calendar Popup** | Standard `<input type="date">` opened unstyled white OS calendar controls. | Enforced dark `color-scheme` across all date inputs for consistent theme integration. |
+| **Camera & Inference Lag** | Unthrottled `setInterval` executions triggered concurrent neural net evaluations on every frame, causing CPU saturation. | Added an active `isDetecting` concurrency lock with throttled 150ms evaluation intervals. |
+| **Vercel Peer Dep Conflicts** | React 18 combined with `face-api.js` triggered `npm ERR! ERESOLVE` under modern Node versions on cloud builders. | Configured `.npmrc` with `legacy-peer-deps=true` across root and frontend levels. |
+| **Client-Side 404s on Refresh** | Direct browser access to subroutes (`/dashboard`, `/hr`, `/it`) triggered 404s on Vercel static serving. | Created `vercel.json` SPA rewrite rules routing all requests back to `/index.html`. |
+| **Offline Cloud Resilience** | Cloud previews without active MongoDB connections broke login and registration flows. | Built intelligent client-side fallbacks in `authStore.js` and `AICopilot.js` providing full interactive functionality out of the box. |
+
+---
+
+## 🎯 Instant Demo Credentials
+
+Use these pre-configured accounts to test authentication flows immediately:
+
+| Account Type | Email Address | Password | Permissions & Role |
 |---|---|---|---|
-| **System Admin** | `admin@nexus.ai` | `Admin@123` | Full Admin Panel, Anomaly Logs, User Management |
-| **HR Manager** | `priya@nexus.ai` | `Pass@123` | HR Portal, Leave Approvals, Attendance Graph |
-| **Software Engineer** | `john@nexus.ai` | `Pass@123` | Employee Dashboard, IT Tickets, Copilot |
-| **ML Engineer** | `rahul@nexus.ai` | `Pass@123` | Analytics, Model Metrics, Burnout Insights |
+| 👑 **Administrator** | `admin@nexus.ai` | `Admin@123` | Full admin privileges, anomaly logs, system telemetry |
+| 💼 **HR Manager** | `priya@nexus.ai` | `Pass@123` | Leave review, directory records, attendance analytics |
+| 💻 **Senior Engineer** | `john@nexus.ai` | `Pass@123` | IT tickets, project dashboard, AI Copilot, directory |
+| 🧠 **ML Engineer** | `rahul@nexus.ai` | `Pass@123` | Predictive metrics, burnout evaluation charts |
 
-*💡 Tip: In demo mode, entering any email containing `admin` grants Administrator permissions!*
+*💡 Tip: In demonstration mode, logging in with any email containing `admin` automatically unlocks Administrative Panel privileges.*
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ Technical Architecture
 
 ```mermaid
 flowchart TD
     User["👤 Employee / Admin"]
-    
-    subgraph Frontend["Frontend — React 18 SPA (Vercel)"]
-        UI["Modern Glassmorphism UI\n(5 Switchable Themes)"]
-        FaceEngine["Face-API.js Engine\n(Webcam Biometrics)"]
-        WebAuthn["WebAuthn Client\n(Fingerprint / TouchID)"]
-        VoiceNav["Web Speech API\n(Voice Command Navigator)"]
-        Store["Zustand State & Auth Store\n(Resilient Offline Fallback)"]
+
+    subgraph Presentation["Client Tier (React 18 SPA)"]
+      UI["Glassmorphism Interface\n(5 Theme Palettes)"]
+      FaceMod["face-api.js Biometrics\n(ResNet-34 + EAR Liveness)"]
+      WebAuthnMod["WebAuthn Interface\n(Windows Hello / Touch ID)"]
+      VoiceMod["Web Speech API\n(Voice Command Navigator)"]
+      StateMod["Zustand Store\n(Offline Resilient Cache)"]
     end
 
-    subgraph Backend["Backend API — Express & Node.js"]
-        AuthRouter["Auth & Biometrics Service\n(JWT & Vector Distance)"]
-        HRRouter["HR & Leave Management"]
-        TicketRouter["IT Helpdesk & Auto-Triage"]
-        AICopilotRouter["AI Copilot Router\n(Intent Detection & Rules)"]
-        SocketServer["Socket.io WebSocket Server\n(Real-Time Alerts & SOS)"]
+    subgraph ServiceTier["Backend API (Node.js & Express)"]
+      AuthServ["Auth & Identity Engine\n(JWT & Vector Distance)"]
+      HRServ["HR Operations & Leave Tracking"]
+      TicketServ["IT Helpdesk & Auto-Triage"]
+      AICopilotServ["AI Intent Pipeline\n(Pattern Match & GPT Proxy)"]
+      SocketServ["Socket.io WebSocket\n(Real-Time Push Alerts & SOS)"]
     end
 
-    subgraph MLService["ML Engine — FastAPI & Python"]
-        BurnoutModel["Random Forest\n(Burnout Risk Analyzer)"]
-        TicketClassifier["TF-IDF + Naive Bayes\n(Ticket Classifier)"]
-        AnomalyDetector["Isolation Forest\n(Security Anomaly Detector)"]
-        EmotionAI["DeepFace / Facial Emotion Engine"]
+    subgraph MLTier["ML Microservice (Python & FastAPI)"]
+      BurnoutML["Random Forest Regressor\n(Burnout Risk Index)"]
+      TicketML["TF-IDF + Naive Bayes\n(Issue Category Routing)"]
+      AnomalyML["Isolation Forest\n(Threat Detection)"]
+      EmotionML["DeepFace Sentiment Pipeline\n(Wellness Checks)"]
     end
 
-    subgraph Storage["Database & Assets"]
-        Mongo[("MongoDB Database")]
-        FaceWeights[("face-api Model Weights")]
+    subgraph Persistence["Storage Tier"]
+      Database[("MongoDB Cluster")]
+      WeightAssets[("Pre-Trained Neural Weights")]
     end
 
     User --> UI
-    UI --> FaceEngine
-    UI --> WebAuthn
-    UI --> VoiceNav
-    UI --> Store
-    Store --> AuthRouter
-    Store --> HRRouter
-    Store --> TicketRouter
-    Store --> AICopilotRouter
-    UI -.-> SocketServer
-    AuthRouter --> Mongo
-    HRRouter --> Mongo
-    TicketRouter --> Mongo
-    AICopilotRouter --> MLService
-    FaceEngine --> FaceWeights
+    UI --> FaceMod
+    UI --> WebAuthnMod
+    UI --> VoiceMod
+    UI --> StateMod
+    StateMod --> AuthServ
+    StateMod --> HRServ
+    StateMod --> TicketServ
+    StateMod --> AICopilotServ
+    UI -.-> SocketServ
+    AuthServ --> Database
+    HRServ --> Database
+    TicketServ --> Database
+    AICopilotServ --> MLTier
+    FaceMod --> WeightAssets
 ```
 
 ---
 
-## 📁 Repository Structure
+## 📂 Project Structure
 
 ```
 Unified_employee_service_application/
-├── frontend/                     # React 18 Single Page Application
+├── frontend/                     # React 18 SPA client
 │   ├── public/
-│   │   ├── models/               # face-api.js neural net weight manifests & shards
-│   │   └── index.html            # HTML shell with Google fonts
+│   │   ├── models/               # Pre-trained face-api neural weights & manifests
+│   │   └── index.html            # Web entry point
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── ai/               # AICopilot.js, VoiceAssistant.js
 │   │   │   ├── biometric/        # FaceScanner.js, FingerprintAuth.js
 │   │   │   ├── common/           # ThemeSwitcher.js
-│   │   │   └── layout/           # Sidebar.js with responsive nav
-│   │   ├── context/              # Zustand state (authStore.js, themeStore.js)
-│   │   ├── pages/                # Landing, Login, Signup, Dashboard, HR, IT, etc.
-│   │   ├── styles/               # global.css with 5 full cyber & light colorways
-│   │   ├── App.js                # React Router v6 route configuration
-│   │   └── index.js              # React 18 DOM mount point
-│   ├── .env.example              # Frontend environment template
+│   │   │   └── layout/           # Sidebar.js
+│   │   ├── context/              # Zustand stores (authStore.js, themeStore.js)
+│   │   ├── pages/                # Dashboard, HR, IT, Analytics, Profile, Admin
+│   │   ├── styles/               # global.css (Themes, custom selects, glassmorphism)
+│   │   ├── App.js                # React Router v6 configuration
+│   │   └── index.js              # DOM mount point
+│   ├── .env.example              # Frontend environment variables template
 │   ├── package.json              # Frontend scripts & dependencies
 │   └── vercel.json               # Direct frontend Vercel deployment spec
-├── backend/                      # Node.js + Express API server
-│   ├── middleware/               # JWT token authentication middleware
-│   ├── models/                   # Mongoose schemas (User, Ticket, LeaveRequest, Announcement)
-│   ├── routes/                   # auth, hr, tickets, ai, employees, emergency, dashboard
-│   ├── server.js                 # HTTP & Socket.io server entry point
-│   ├── .env.example              # Backend environment configuration
-│   └── package.json              # Server dependencies & scripts
-├── ml-services/                  # Python FastAPI machine learning microservice
-│   ├── models/                   # Auto-trained scikit-learn models
-│   ├── main.py                   # REST endpoints for burnout, tickets, and anomalies
-│   └── requirements.txt          # Python package requirements
-├── database/
-│   └── seeds/seedData.js         # Realistic dummy data generator for rapid testing
-├── devops/
-│   └── docker-compose.yml        # Multi-container orchestration config
+├── backend/                      # Node.js Express API server
+│   ├── middleware/               # JWT validation & role guards
+│   ├── models/                   # Mongoose schemas (User, Ticket, Leave, Announcement)
+│   ├── routes/                   # REST endpoints (auth, hr, tickets, ai, employees)
+│   ├── server.js                 # Express server & Socket.io entry point
+│   ├── .env.example              # Backend environment variables template
+│   └── package.json              # Backend dependencies
+├── ml-services/                  # Python FastAPI machine learning service
+│   ├── models/                   # Serialized ML model binaries
+│   ├── main.py                   # REST endpoints for burnout, tickets & anomalies
+│   └── requirements.txt          # Python dependencies
+├── database/seeds/seedData.js    # Comprehensive mock data generator
+├── devops/docker-compose.yml     # Container orchestration specification
 ├── vercel.json                   # Root monorepo deployment descriptor for Vercel
 ├── .npmrc                        # Peer dependency safety override for modern Node
-├── .gitignore                    # Comprehensive ignore rules
-└── package.json                  # Root runner scripts
+├── .gitignore                    # Git exclusions
+└── package.json                  # Root scripts runner
 ```
 
 ---
 
-## 🚀 Running the Project Locally
+## 🚀 Setup & Execution Guide
 
 ### Prerequisites
-- [Node.js](https://nodejs.org) (v18 or higher)
-- [Python](https://www.python.org) (v3.10 or higher)
-- [MongoDB](https://www.mongodb.com) (Local instance or MongoDB Atlas free cluster)
-- [Git](https://git-scm.com)
+* [Node.js](https://nodejs.org) `v18+` or `v20+`
+* [Python](https://www.python.org) `v3.10+`
+* [MongoDB](https://www.mongodb.com) *(Local or MongoDB Atlas cluster)*
+* [Git](https://git-scm.com)
 
-### 1. Clone the Repository
+### 1. Clone & Prepare
 ```bash
 git clone https://github.com/lithik-raj/Unified_employee_service_application.git
 cd Unified_employee_service_application
 ```
 
-### 2. Set Up Environment Variables
+### 2. Environment Setup
 ```bash
 # Backend configuration
 cp backend/.env.example backend/.env
@@ -209,17 +230,17 @@ cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
 ```
 
-### 3. Install Dependencies
+### 3. Install & Start Services
 
-**Terminal 1 — Backend:**
+**Terminal 1 — Backend Server:**
 ```bash
 cd backend
 npm install
 npm run dev
-# Running on http://localhost:5000
+# Live at: http://localhost:5000
 ```
 
-**Terminal 2 — Python ML Microservice (Optional for Advanced ML):**
+**Terminal 2 — Python ML Microservice:**
 ```bash
 cd ml-services
 python -m venv venv
@@ -230,68 +251,58 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-# Running on http://localhost:8000
+# Live at: http://localhost:8000
 ```
 
-**Terminal 3 — Frontend:**
+**Terminal 3 — Frontend Interface:**
 ```bash
 cd frontend
 npm install --legacy-peer-deps
 npm start
-# Running on http://localhost:3000
+# Live at: http://localhost:3000
 ```
 
-### 4. (Optional) Seed Sample Database
+### 4. (Optional) Populate Database
 ```bash
 npm run seed
 ```
 
 ---
 
-## 🐳 Docker Deployment (One-Click)
+## 🐳 Docker Containerization (Single Command)
 
-Run the entire microservice stack (Frontend + Backend + ML Service + MongoDB) with Docker:
+To run the complete system in isolated Docker containers:
 
 ```bash
 docker-compose up --build
 ```
 
-- **Frontend App**: [http://localhost:3000](http://localhost:3000)
-- **Backend API**: [http://localhost:5000](http://localhost:5000)
-- **ML Analytics**: [http://localhost:8000](http://localhost:8000)
-- **Database**: `mongodb://localhost:27017`
+Endpoints:
+* **Frontend Portal**: [http://localhost:3000](http://localhost:3000)
+* **Backend API**: [http://localhost:5000](http://localhost:5000)
+* **ML Microservice**: [http://localhost:8000](http://localhost:8000)
+* **MongoDB**: `localhost:27017`
 
 ---
 
-## ☁️ Deploying to Vercel
+## ☁️ Vercel Deployment Instructions
 
-This repository is pre-configured for seamless zero-config deployment on Vercel:
-
-1. Push this repository to your GitHub account: `https://github.com/lithik-raj/Unified_employee_service_application`.
-2. Go to [Vercel](https://vercel.com) and click **"Add New Project"**.
-3. Import `Unified_employee_service_application`.
-4. Vercel automatically detects the root `vercel.json` and executes:
-   - **Build Command**: `cd frontend && npm install --legacy-peer-deps && npm run build`
-   - **Output Directory**: `frontend/build`
-5. Click **Deploy**!
-6. Your live application will be instantly accessible at:
-   `https://unified-employee-service-application.vercel.app` *(or your custom project domain)*.
-
----
-
-## 🎙️ Interactive Voice Navigation Reference
-
-Click the microphone button on the top-right of the dashboard and try saying:
-- *"Open dashboard"* → Instantly routes to personal metrics.
-- *"Open HR portal"* → Navigates to leave management & payslips.
-- *"Raise ticket"* → Jumps to IT helpdesk with issue reporting.
-- *"Show analytics"* → Opens workforce predictive ML graphs.
-- *"Find employees"* → Opens smart AI talent search.
+1. Ensure your repository is pushed to:
+   `https://github.com/lithik-raj/Unified_employee_service_application`
+2. Navigate to **[vercel.com/new](https://vercel.com/new)** or click the button below:
+   
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lithik-raj/Unified_employee_service_application)
+3. Select the repository and click **Deploy**.
+4. The deployment pipeline will automatically detect the root `vercel.json` specification:
+   * **Build Command**: `cd frontend && npm install --legacy-peer-deps && npm run build`
+   * **Output Directory**: `frontend/build`
+5. The live application will be available at:
+   **`https://unified-employee-service-application-lithik-raj.vercel.app`**
 
 ---
 
-## 👥 Hackathon Team & Acknowledgements
+## 📄 License & Team
 
-- **Repository**: [lithik-raj/Unified_employee_service_application](https://github.com/lithik-raj/Unified_employee_service_application)
-- Built with passion by our team during the hackathon.
-- Open-sourced under the [MIT License](LICENSE).
+* **Author**: [Lithik Raj](https://github.com/lithik-raj)
+* **Repository**: [lithik-raj/Unified_employee_service_application](https://github.com/lithik-raj/Unified_employee_service_application)
+* **License**: Open-sourced under the [MIT License](LICENSE).
