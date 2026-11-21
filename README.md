@@ -168,41 +168,36 @@ flowchart TD
 
 ```
 Unified_employee_service_application/
-├── frontend/                     # React 18 SPA client
-│   ├── public/
-│   │   ├── models/               # Pre-trained face-api neural weights & manifests
-│   │   └── index.html            # Web entry point
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ai/               # AICopilot.js, VoiceAssistant.js
-│   │   │   ├── biometric/        # FaceScanner.js, FingerprintAuth.js
-│   │   │   ├── common/           # ThemeSwitcher.js
-│   │   │   └── layout/           # Sidebar.js
-│   │   ├── context/              # Zustand stores (authStore.js, themeStore.js)
-│   │   ├── pages/                # Dashboard, HR, IT, Analytics, Profile, Admin
-│   │   ├── styles/               # global.css (Themes, custom selects, glassmorphism)
-│   │   ├── App.js                # React Router v6 configuration
-│   │   └── index.js              # DOM mount point
-│   ├── .env.example              # Frontend environment variables template
-│   ├── package.json              # Frontend scripts & dependencies
-│   └── vercel.json               # Direct frontend Vercel deployment spec
+├── public/                       # Static assets & pre-trained AI weights
+│   ├── models/                   # Pre-trained face-api neural weights & manifests
+│   └── index.html                # Web entry point
+├── src/                          # React 18 SPA application
+│   ├── components/
+│   │   ├── ai/                   # AICopilot.js, VoiceAssistant.js
+│   │   ├── biometric/            # FaceScanner.js, FingerprintAuth.js
+│   │   ├── common/               # ThemeSwitcher.js
+│   │   └── layout/               # Sidebar.js
+│   ├── context/                  # Zustand stores (authStore.js, themeStore.js)
+│   ├── pages/                    # Dashboard, HR, IT, Analytics, Profile, Admin
+│   ├── styles/                   # global.css (Themes, custom selects, glassmorphism)
+│   ├── App.js                    # React Router v6 configuration
+│   └── index.js                  # DOM mount point
 ├── backend/                      # Node.js Express API server
 │   ├── middleware/               # JWT validation & role guards
 │   ├── models/                   # Mongoose schemas (User, Ticket, Leave, Announcement)
 │   ├── routes/                   # REST endpoints (auth, hr, tickets, ai, employees)
 │   ├── server.js                 # Express server & Socket.io entry point
-│   ├── .env.example              # Backend environment variables template
-│   └── package.json              # Backend dependencies
+│   └── .env.example              # Backend environment variables template
 ├── ml-services/                  # Python FastAPI machine learning service
 │   ├── models/                   # Serialized ML model binaries
 │   ├── main.py                   # REST endpoints for burnout, tickets & anomalies
-│   └── requirements.txt          # Python dependencies
+│   └── ml-requirements.txt       # Python dependencies
 ├── database/seeds/seedData.js    # Comprehensive mock data generator
 ├── devops/docker-compose.yml     # Container orchestration specification
-├── vercel.json                   # Root monorepo deployment descriptor for Vercel
+├── vercel.json                   # Zero-config SPA Vercel deployment spec
 ├── .npmrc                        # Peer dependency safety override for modern Node
 ├── .gitignore                    # Git exclusions
-└── package.json                  # Root scripts runner
+└── package.json                  # Unified root package runner & dependencies
 ```
 
 ---
@@ -221,26 +216,22 @@ git clone https://github.com/lithik-raj/Unified_employee_service_application.git
 cd Unified_employee_service_application
 ```
 
-### 2. Environment Setup
-```bash
-# Backend configuration
-cp backend/.env.example backend/.env
+### 2. Install & Start Full-Stack Application
 
-# Frontend configuration
-cp frontend/.env.example frontend/.env
+**Frontend & Integrated App:**
+```bash
+npm install --legacy-peer-deps
+npm start
+# Live at: http://localhost:3000
 ```
 
-### 3. Install & Start Services
-
-**Terminal 1 — Backend Server:**
+**Backend Server:**
 ```bash
-cd backend
-npm install
-npm run dev
+npm run server
 # Live at: http://localhost:5000
 ```
 
-**Terminal 2 — Python ML Microservice:**
+**Python ML Microservice (Optional):**
 ```bash
 cd ml-services
 python -m venv venv
@@ -249,20 +240,12 @@ venv\Scripts\activate
 # macOS/Linux:
 source venv/bin/activate
 
-pip install -r requirements.txt
+pip install -r ml-requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 # Live at: http://localhost:8000
 ```
 
-**Terminal 3 — Frontend Interface:**
-```bash
-cd frontend
-npm install --legacy-peer-deps
-npm start
-# Live at: http://localhost:3000
-```
-
-### 4. (Optional) Populate Database
+### 3. (Optional) Populate Database
 ```bash
 npm run seed
 ```
@@ -293,9 +276,10 @@ Endpoints:
    
    [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lithik-raj/Unified_employee_service_application)
 3. Select the repository and click **Deploy**.
-4. The deployment pipeline will automatically detect the root `vercel.json` specification:
-   * **Build Command**: `cd frontend && npm install --legacy-peer-deps && npm run build`
-   * **Output Directory**: `frontend/build`
+4. The deployment pipeline will automatically detect the root Create React App specification:
+   * **Framework**: Create React App
+   * **Build Command**: `npm run build`
+   * **Output Directory**: `build`
 5. The live application will be available at:
    **`https://unified-employee-service-application-lithik-raj.vercel.app`**
 
