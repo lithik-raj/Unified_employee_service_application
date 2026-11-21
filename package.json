@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "Unified Employee Service Application — Enterprise Workplace OS with Biometric Auth, AI Copilot, ML Analytics",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "browser": {
     "fs": false,
     "path": false,
