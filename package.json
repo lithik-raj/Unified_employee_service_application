@@ -3,6 +3,8 @@
   "version": "2.0.0",
   "description": "NEXUS AI — Enterprise Workplace OS with Biometric Auth, AI Copilot, ML Analytics",
   "scripts": {
+    "build": "cd frontend && npm install --legacy-peer-deps && npm run build",
+    "start": "cd frontend && npm start",
     "install:all": "cd backend && npm install && cd ../frontend && npm install",
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm start",
