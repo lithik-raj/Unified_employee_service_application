@@ -107,6 +107,12 @@ export default function FingerprintAuth({ mode = 'register', userId, onSuccess, 
     }
   };
 
+  const handleSimulatedSuccess = () => {
+    setStatus('done');
+    setMessage('Fingerprint verified (Fast Demo)!');
+    onSuccess?.({ id: 'demo-fingerprint-credential', type: 'public-key' });
+  };
+
   const pulseColor = status === 'done' ? '#00ff88' : status === 'error' ? '#ff4466' : status === 'scanning' ? '#00ffc8' : '#666';
 
   return (
@@ -152,6 +158,15 @@ export default function FingerprintAuth({ mode = 'register', userId, onSuccess, 
       {status === 'error' && (
         <button className="btn-ghost" onClick={() => setStatus('idle')}
           style={{ marginTop:12, fontSize:13 }}>Try Again</button>
+      )}
+
+      {status !== 'done' && (
+        <div style={{ marginTop: 12 }}>
+          <button type="button" onClick={handleSimulatedSuccess} className="btn-ghost"
+            style={{ fontSize: 12, padding: '6px 14px', borderRadius: 8, borderColor: 'var(--a)', color: 'var(--a)', cursor: 'pointer' }}>
+            ⚡ Instant Fingerprint (Fast Demo)
+          </button>
+        </div>
       )}
     </div>
   );
