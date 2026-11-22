@@ -276,10 +276,10 @@ Endpoints:
    
    [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lithik-raj/Unified_employee_service_application)
 3. Select the repository and click **Deploy**.
-4. The deployment pipeline will automatically detect the root Create React App specification:
-   * **Framework**: Create React App
+4. The deployment pipeline will automatically detect the root Vite specification:
+   * **Framework**: Vite
    * **Build Command**: `npm run build`
-   * **Output Directory**: `build`
+   * **Output Directory**: `dist`
 5. The live application will be available at:
    **`https://unified-employee-service-application-lithik-raj.vercel.app`**
 
