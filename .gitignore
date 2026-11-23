@@ -26,7 +26,8 @@ __pycache__/
 env/
 venv/
 .venv/
-ml-services/models/*.pkl
+# Keep lightweight pre-trained models for serverless deployments
+!ml-services/models/*.pkl
 ml-services/models/*.h5
 
 # Vercel
